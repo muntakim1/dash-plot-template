@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  web:
+    image: python:3.8
+    build:
+      .
+    ports:
+    - "8000:8000"
+    volumes:
+    - .:/app
+    deploy:
+      replicas: 5
